@@ -13,9 +13,7 @@
         <file>Icons/comm-dark.png</file>
         <file>Icons/map-light.png</file>
         <file>Icons/map-dark.png</file>
-        <file>Icons/map=dark</file>
         <file>Icons/gear-light.png</file>
         <file>Icons/gear-dark.png</file>
-        <file>Icons/icon3_7_1.png</file>
     </qresource>
 </RCC>
