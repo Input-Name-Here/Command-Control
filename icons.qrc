@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/docs-light.png</file>
+        <file>Icons/docs-dark.png</file>
+        <file>Icons/icons.svg</file>
+        <file>Icons/radar-light.png</file>
+        <file>Icons/radar-dark.png</file>
+        <file>Icons/db-light.png</file>
+        <file>Icons/db-dark.png</file>
+        <file>Icons/net-light.png</file>
+        <file>Icons/net-dark.png</file>
+        <file>Icons/comm-light.png</file>
+        <file>Icons/comm-dark.png</file>
+        <file>Icons/map-light.png</file>
+        <file>Icons/map-dark.png</file>
+        <file>Icons/map=dark</file>
+        <file>Icons/gear-light.png</file>
+        <file>Icons/gear-dark.png</file>
+        <file>Icons/icon3_7_1.png</file>
+    </qresource>
+</RCC>
