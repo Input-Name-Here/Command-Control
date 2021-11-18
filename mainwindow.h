@@ -20,6 +20,10 @@ private slots:
 
     void on_actionMap_triggered();
 
+    void on_VolumeSliderR_sliderMoved(int position);
+
+    void on_VolumeSliderL_sliderMoved(int position);
+
 private:
     Ui::MainWindow *ui;
 };
