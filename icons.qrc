@@ -15,5 +15,13 @@
         <file>Icons/map-dark.png</file>
         <file>Icons/gear-light.png</file>
         <file>Icons/gear-dark.png</file>
+        <file>Icons/plus-light.png</file>
+        <file>Icons/plus-dark.png</file>
+        <file>Icons/minus-dark.png</file>
+        <file>Icons/minus-light.png</file>
+        <file>Icons/line-dark.png</file>
+        <file>Icons/line-light.png</file>
+        <file>Icons/select-dark.png</file>
+        <file>Icons/select-light.png</file>
     </qresource>
 </RCC>
