@@ -66,7 +66,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <property name="documentMode">
      <bool>true</bool>
@@ -389,13 +389,6 @@
              </property>
             </widget>
            </item>
-           <item>
-            <widget class="QCheckBox" name="checkBox_7">
-             <property name="text">
-              <string>Radar</string>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
         </widget>
@@ -659,10 +652,10 @@
      <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>411</width>
-        <height>411</height>
+        <x>0</x>
+        <y>0</y>
+        <width>421</width>
+        <height>431</height>
        </rect>
       </property>
       <property name="autoFillBackground">
@@ -1639,15 +1632,82 @@ background-color: blue; border: none;
      <attribute name="title">
       <string>Data</string>
      </attribute>
+     <widget class="QTabWidget" name="tabWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>701</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="DataObjTab">
+       <attribute name="title">
+        <string>Object</string>
+       </attribute>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>60</y>
+          <width>281</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Object Specific Data goes here</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>150</y>
+          <width>151</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Everything in this page will likely be generated in code automatically</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>JSON</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="DataInvTab">
+       <attribute name="title">
+        <string>Inventory</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Radar</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Control</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Camera</string>
+       </attribute>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_docs">
      <attribute name="title">
       <string>Documents</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_radar">
-     <attribute name="title">
-      <string>Radar</string>
      </attribute>
     </widget>
    </widget>
@@ -1697,7 +1757,6 @@ background-color: blue; border: none;
     <addaction name="actionNet"/>
     <addaction name="actionData"/>
     <addaction name="actionDocuments"/>
-    <addaction name="actionRadar"/>
    </widget>
    <addaction name="menuSex"/>
    <addaction name="menuConfiguration"/>
