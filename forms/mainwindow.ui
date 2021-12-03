@@ -66,7 +66,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <property name="documentMode">
      <bool>true</bool>
@@ -425,7 +425,7 @@
           <string>+</string>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset resource="../icons.qrc">
            <normaloff>:/Icons/plus-light.png</normaloff>:/Icons/plus-light.png</iconset>
          </property>
         </widget>
@@ -442,7 +442,7 @@
           <string>-</string>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset resource="../icons.qrc">
            <normaloff>:/Icons/minus-light.png</normaloff>:/Icons/minus-light.png</iconset>
          </property>
         </widget>
@@ -459,7 +459,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset resource="../icons.qrc">
            <normaloff>:/Icons/line-light.png</normaloff>:/Icons/line-light.png</iconset>
          </property>
          <property name="iconSize">
@@ -482,7 +482,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset resource="../icons.qrc">
            <normaloff>:/Icons/select-light.png</normaloff>:/Icons/select-light.png</iconset>
          </property>
          <property name="iconSize">
@@ -1491,7 +1491,7 @@ background-color: blue; border: none;
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="NetConnectButton">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -1504,7 +1504,7 @@ background-color: blue; border: none;
         <string>Connect</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="NetDisconnectButton">
        <property name="enabled">
         <bool>false</bool>
        </property>
@@ -1642,7 +1642,7 @@ background-color: blue; border: none;
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="DataObjTab">
        <attribute name="title">
@@ -1771,7 +1771,7 @@ background-color: blue; border: none;
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/gear-dark.png</normaloff>
      <normalon>:/Icons/gear-light.png</normalon>:/Icons/gear-dark.png</iconset>
    </property>
@@ -1784,7 +1784,7 @@ background-color: blue; border: none;
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/map-dark.png</normaloff>
      <normalon>:/Icons/map-light.png</normalon>:/Icons/map-dark.png</iconset>
    </property>
@@ -1797,7 +1797,7 @@ background-color: blue; border: none;
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/comm-dark.png</normaloff>
      <normalon>:/Icons/comm-light.png</normalon>
      <activeon>:/Icons/comm-light.png</activeon>:/Icons/comm-dark.png</iconset>
@@ -1811,7 +1811,7 @@ background-color: blue; border: none;
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/net-dark.png</normaloff>
      <normalon>:/Icons/net-light.png</normalon>:/Icons/net-dark.png</iconset>
    </property>
@@ -1827,7 +1827,7 @@ background-color: blue; border: none;
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/db-dark.png</normaloff>
      <normalon>:/Icons/db-light.png</normalon>:/Icons/db-dark.png</iconset>
    </property>
@@ -1843,7 +1843,7 @@ background-color: blue; border: none;
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/docs-dark.png</normaloff>
      <normalon>:/Icons/docs-light.png</normalon>:/Icons/docs-dark.png</iconset>
    </property>
@@ -1859,7 +1859,7 @@ background-color: blue; border: none;
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="icons.qrc">
+    <iconset resource="../icons.qrc">
      <normaloff>:/Icons/radar-dark.png</normaloff>
      <normalon>:/Icons/radar-light.png</normalon>:/Icons/radar-dark.png</iconset>
    </property>
@@ -1870,7 +1870,7 @@ background-color: blue; border: none;
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="icons.qrc"/>
+  <include location="../icons.qrc"/>
  </resources>
  <connections/>
 </ui>

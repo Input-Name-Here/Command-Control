@@ -2,7 +2,7 @@
 #include <QScrollBar>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include "socket/socket.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -62,4 +62,11 @@ void MainWindow::on_VolumeSliderR_sliderMoved(int position)
 void MainWindow::on_VolumeSliderL_sliderMoved(int position)
 {
 
+}
+
+void MainWindow::on_NetConnectButton_clicked()
+{
+    printf("\nConnect\n");
+    Socket s = Socket(5000,2130706433); //2885681153 loopback address
+    s.Connect();
 }

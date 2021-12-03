@@ -27,6 +27,8 @@ private slots:
 
 
 
+    void on_NetConnectButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
