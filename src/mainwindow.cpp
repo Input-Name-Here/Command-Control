@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabWidget->setTabsClosable(true);
 
     connect(ui->pushButton_8, SIGNAL(clicked()), this, SLOT(on_sentMessage()));
+
 }
 
 
@@ -67,6 +68,7 @@ void MainWindow::on_VolumeSliderL_sliderMoved(int position)
 void MainWindow::on_NetConnectButton_clicked()
 {
     printf("\nConnect\n");
-    Socket s = Socket(5000,2130706433); //2885681153 loopback address
+    Socket s = Socket(5123,2130706433); //2885681153 loopback address
     s.Connect();
+    puts(std::to_string(s.Recv()).c_str());
 }
