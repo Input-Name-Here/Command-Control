@@ -1,19 +1,28 @@
-#ifndef SOCKET_H
+//#ifndef SOCKET_H
 #define SOCKET_H
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#include <string>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+using std::string;
+//using std::thread;
+
 class Socket {
-    public:
+    private:
+        struct sockaddr_in ServerIp;
         int Port;
         int IpAddr;
         int Sock;
         char buffer[1024];
         //struct ServerIp;
-        Socket(int port, int addr);
+    public:
+        Socket(int port, string addr);
         void Connect();
-        void Send(std::string message);
-        std::string Recv();
+        void Send(string message);
+        string Recv();
 };
 
-#endif // SOCKET_H
+//#endif // SOCKET_H

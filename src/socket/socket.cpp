@@ -1,18 +1,22 @@
+
 #include <iostream>
 #include <stdio.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include "src/socket/socket.h"
 #include <string.h>
+#include <string>
 #include <unistd.h>
+#include <thread>
 
-//#import std
+using std::string;
+using std::thread;
 
-
-Socket::Socket(int port, int addr){
+Socket::Socket(int port, string addr){
     printf("\nInitialisation\n");
-    //IpAddr = inet_addr("127.0.0.1");
-    //Port = htons(5123);
+    ServerIp.sin_family= AF_INET;
+    ServerIp.sin_port=htons(port);//htons(5123);
+    ServerIp.sin_addr.s_addr=inet_addr(addr.c_str());
     buffer[1024] = {0};
     Sock = socket(AF_INET, SOCK_STREAM, 0);
     if (Sock < 0)
@@ -23,13 +27,11 @@ Socket::Socket(int port, int addr){
     else{
         printf("\n Socket creation success \n");
     }
+    //thread RxLoopThread(RxLoop);
 }
 
 void Socket::Connect(){
-    struct sockaddr_in ServerIp;
-    ServerIp.sin_family= AF_INET;
-    ServerIp.sin_port=htons(5123);//htons(5123);
-    ServerIp.sin_addr.s_addr=inet_addr("127.0.0.1");
+
     if(inet_pton(AF_INET, "127.0.0.1", &ServerIp.sin_addr) <= 0){
       puts("Invalid address");
       return;
@@ -48,6 +50,7 @@ void Socket::Connect(){
 
 }
 
+
 void Socket::Send(std::string message){
 
     //send ( Sock , message , strlen(message.c_str()));
@@ -55,9 +58,9 @@ void Socket::Send(std::string message){
 
 }
 
-std::string Socket::Recv(){
+string Socket::Recv(){
     ssize_t len = recv ( Sock , buffer , 1024,0 );
-    //std::string buffermsg(buffer,buffer+len);
-    //std::string message = buffermsg.substr(0,len);
-    return "hi";
+    std::string buffermsg(buffer,buffer+len);
+    std::string message = buffermsg.substr(0,len);
+    return message;
 }
