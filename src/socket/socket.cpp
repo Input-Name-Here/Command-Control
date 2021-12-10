@@ -9,58 +9,33 @@
 #include <unistd.h>
 #include <thread>
 
-using std::string;
-using std::thread;
 
-Socket::Socket(int port, string addr){
-    printf("\nInitialisation\n");
-    ServerIp.sin_family= AF_INET;
-    ServerIp.sin_port=htons(port);//htons(5123);
-    ServerIp.sin_addr.s_addr=inet_addr(addr.c_str());
-    buffer[1024] = {0};
-    Sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (Sock < 0)
+Socket::Socket(QObject *parent) :
+    QObject(parent)
+{
+}
+
+void Socket::doConnect()
+{
+    socket = new QTcpSocket(this);
+    socket->connectToHost("google.com", 80);
+
+    if(socket->waitForConnected(5000))
     {
-        printf("\n Socket creation error \n");
-        return;
+        qDebug() << "Connected!";
+        // send
+        socket->write("Hello server\r\n\r\n");
+        socket->waitForBytesWritten(1000);
+        socket->waitForReadyRead(3000);
+        qDebug() << "Reading: " << socket->bytesAvailable();
+        // get the data
+        qDebug() << socket->readAll();
+        // close the connection
+        socket->close();
     }
-    else{
-        printf("\n Socket creation success \n");
-    }
-    //thread RxLoopThread(RxLoop);
-}
-
-void Socket::Connect(){
-
-    if(inet_pton(AF_INET, "127.0.0.1", &ServerIp.sin_addr) <= 0){
-      puts("Invalid address");
-      return;
-    }
-    int a = connect(Sock, (struct sockaddr *)&ServerIp, sizeof(ServerIp));
-    if (a<0)
+    else
     {
-        printf("\nConnection Failed \n");
-        puts(std::to_string(a).c_str());
-        puts(std::to_string(ServerIp.sin_addr.s_addr).c_str());
-        puts(std::to_string(ServerIp.sin_port).c_str());
-        return;
-    }else{
-        printf("\nConnection Success \n");
+        qDebug() << "Not connected!";
     }
-
 }
 
-
-void Socket::Send(std::string message){
-
-    //send ( Sock , message , strlen(message.c_str()));
-    send ( Sock , buffer , strlen(message.c_str()),0);
-
-}
-
-string Socket::Recv(){
-    ssize_t len = recv ( Sock , buffer , 1024,0 );
-    std::string buffermsg(buffer,buffer+len);
-    std::string message = buffermsg.substr(0,len);
-    return message;
-}

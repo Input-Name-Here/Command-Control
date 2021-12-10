@@ -1,33 +1,25 @@
 #ifndef SOCKET_H
 #define SOCKET_H
-#include <string.h>
-#include <iostream>
-#include <stdio.h>
-#include <string>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <unistd.h>
+
 #include <QObject>
-using std::string;
-//using std::thread;
+#include <QTcpSocket>
+#include <QDebug>
 
 class Socket : public QObject
 {
     Q_OBJECT
-    public:
-        Socket(int port, string addr);
-        void Connect();
-        void Send(string message);
-        string Recv();
-    signals:
-        void receiveMessage();
-    private:
-        struct sockaddr_in ServerIp;
-        int Port;
-        int IpAddr;
-        int Sock;
-        char buffer[1024];
-        //struct ServerIp;
+public:
+    explicit Socket(QObject *parent = 0);
+
+    void doConnect();
+
+signals:
+
+public slots:
+
+private:
+    QTcpSocket *socket;
+
 };
 
 #endif // SOCKET_H

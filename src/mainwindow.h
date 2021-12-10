@@ -22,7 +22,6 @@ private:
 
 
 private slots:
-    void on_socket_receive();
     void on_actionConfig_triggered();
     void on_actionMap_triggered();
     void on_VolumeSliderR_sliderMoved(int position);

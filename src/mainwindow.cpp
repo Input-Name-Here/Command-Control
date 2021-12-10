@@ -68,12 +68,10 @@ void MainWindow::on_VolumeSliderL_sliderMoved(int position)
 void MainWindow::on_NetConnectButton_clicked()
 {
     printf("\nConnect\n");
-    Socket sock = Socket(5000,"127.0.0.1");
-    sock.Connect();
-
+    //Socket sock = Socket(5000,"127.0.0.1");
+    //sock.Connect();
+    Socket s;
+    s.doConnect();
 }
 
-void on_socket_receive(){
 
-
-}
