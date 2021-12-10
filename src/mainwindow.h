@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QString>
-
+//#include "src/socket/socket.h"
 namespace Ui {
 class MainWindow;
 }
@@ -20,7 +20,9 @@ public:
 private:
     void new_msg(QString text);
 
+
 private slots:
+    void on_socket_receive();
     void on_actionConfig_triggered();
     void on_actionMap_triggered();
     void on_VolumeSliderR_sliderMoved(int position);
@@ -33,6 +35,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
 };
 void hello();
 

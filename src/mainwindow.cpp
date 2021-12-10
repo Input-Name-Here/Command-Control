@@ -68,16 +68,12 @@ void MainWindow::on_VolumeSliderL_sliderMoved(int position)
 void MainWindow::on_NetConnectButton_clicked()
 {
     printf("\nConnect\n");
-    Socket s = Socket(5000,"127.0.0.1"); //2885681153 loopback address
-    s.Connect();
+    Socket sock = Socket(5000,"127.0.0.1");
+    sock.Connect();
 
-    /*puts(s.Recv().c_str());
-    puts("New receive");
-    puts(s.Recv().c_str());
-    puts("New receive");
-    puts(s.Recv().c_str());
-    puts("New receive");
-    puts(s.Recv().c_str());
-    puts("New receive");*/
 }
 
+void on_socket_receive(){
+
+
+}
