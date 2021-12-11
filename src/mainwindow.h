@@ -8,16 +8,21 @@ namespace Ui {
 class MainWindow;
 }
 
+namespace CommandControl::UI {
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 private:
     void new_msg(QString text);
+
+
 private slots:
     void on_actionConfig_triggered();
     void on_actionMap_triggered();
@@ -27,9 +32,15 @@ private slots:
 
 
 
+    void on_NetConnectButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 };
 
+void hello();
+
+}
 
 #endif // MAINWINDOW_H
