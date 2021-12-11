@@ -34,7 +34,6 @@ HEADERS += \
         src/mainwindow.h \
         src/networking/client.h
 
-
 FORMS += \
         forms/mainwindow.ui
 
