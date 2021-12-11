@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>477</width>
-    <height>531</height>
+    <height>515</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -81,7 +81,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>7</number>
       </property>
       <property name="documentMode">
        <bool>true</bool>
@@ -255,7 +255,7 @@
              <bool>true</bool>
             </property>
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -275,6 +275,29 @@
             <property name="autoFillBackground">
              <bool>false</bool>
             </property>
+            <widget class="QScrollArea" name="scrollArea_2">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>350</y>
+               <width>120</width>
+               <height>80</height>
+              </rect>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>118</width>
+                <height>78</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -291,18 +314,21 @@
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>47</height>
+            <height>62</height>
            </size>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_6">
            <property name="leftMargin">
             <number>0</number>
            </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
            <property name="rightMargin">
             <number>0</number>
            </property>
            <property name="bottomMargin">
-            <number>9</number>
+            <number>0</number>
            </property>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -649,7 +675,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>194</width>
-                   <height>358</height>
+                   <height>347</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -677,6 +703,273 @@
          </layout>
         </item>
        </layout>
+      </widget>
+      <widget class="QWidget" name="tab_net">
+       <attribute name="title">
+        <string>Network</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>191</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Server Status</string>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>61</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Server Ip:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>91</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Server Status:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>20</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>0.0.0.0</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>21</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{ 
+background-color: red; border: none; 
+}
+QPushButton:pressed{ 
+background-color: blue; border: none; 
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>191</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Server Connection</string>
+        </property>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>61</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Server Ip:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>20</y>
+           <width>121</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="NetConnectButton">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>50</y>
+           <width>90</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Connect</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="NetDisconnectButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>50</y>
+           <width>90</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Disconnect</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>231</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Clients</string>
+        </property>
+        <widget class="QLabel" name="label_15">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>210</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Client Count:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>210</y>
+           <width>31</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>9999</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox_21">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>231</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display Client Modules</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QTreeWidget" name="treeWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>40</y>
+           <width>231</width>
+           <height>171</height>
+          </rect>
+         </property>
+         <attribute name="headerVisible">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Clients</string>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>User 01</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Module</string>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>User 02</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>User 03</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="Line" name="line_10">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>0</y>
+          <width>16</width>
+          <height>99941</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>381</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_comms">
        <attribute name="title">
@@ -1583,273 +1876,6 @@ p, li { white-space: pre-wrap; }
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_net">
-       <attribute name="title">
-        <string>Network</string>
-       </attribute>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>90</y>
-          <width>191</width>
-          <height>61</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Server Status</string>
-        </property>
-        <widget class="QLabel" name="label_5">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>20</y>
-           <width>61</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Server Ip:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_6">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>40</y>
-           <width>91</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Server Status:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_13">
-         <property name="geometry">
-          <rect>
-           <x>60</x>
-           <y>20</y>
-           <width>58</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>0.0.0.0</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>40</y>
-           <width>21</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{ 
-background-color: red; border: none; 
-}
-QPushButton:pressed{ 
-background-color: blue; border: none; 
-}
-
-</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>191</width>
-          <height>81</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Server Connection</string>
-        </property>
-        <widget class="QLabel" name="label_7">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>20</y>
-           <width>61</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Server Ip:</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit">
-         <property name="geometry">
-          <rect>
-           <x>60</x>
-           <y>20</y>
-           <width>121</width>
-           <height>21</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="NetConnectButton">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>50</y>
-           <width>90</width>
-           <height>28</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Connect</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="NetDisconnectButton">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="geometry">
-          <rect>
-           <x>90</x>
-           <y>50</y>
-           <width>90</width>
-           <height>28</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Disconnect</string>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_5">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>160</y>
-          <width>231</width>
-          <height>251</height>
-         </rect>
-        </property>
-        <property name="title">
-         <string>Clients</string>
-        </property>
-        <widget class="QLabel" name="label_15">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>210</y>
-           <width>81</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Client Count:</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_14">
-         <property name="geometry">
-          <rect>
-           <x>80</x>
-           <y>210</y>
-           <width>31</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>9999</string>
-         </property>
-        </widget>
-        <widget class="QCheckBox" name="checkBox_21">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>20</y>
-           <width>231</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Display Client Modules</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-        <widget class="QTreeWidget" name="treeWidget">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>40</y>
-           <width>231</width>
-           <height>171</height>
-          </rect>
-         </property>
-         <attribute name="headerVisible">
-          <bool>false</bool>
-         </attribute>
-         <column>
-          <property name="text">
-           <string>Clients</string>
-          </property>
-         </column>
-         <item>
-          <property name="text">
-           <string>User 01</string>
-          </property>
-          <item>
-           <property name="text">
-            <string>Module</string>
-           </property>
-          </item>
-         </item>
-         <item>
-          <property name="text">
-           <string>User 02</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>User 03</string>
-          </property>
-         </item>
-        </widget>
-       </widget>
-       <widget class="Line" name="line_10">
-        <property name="geometry">
-         <rect>
-          <x>290</x>
-          <y>0</y>
-          <width>16</width>
-          <height>99941</height>
-         </rect>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit">
-        <property name="geometry">
-         <rect>
-          <x>310</x>
-          <y>10</y>
-          <width>381</width>
-          <height>401</height>
-         </rect>
-        </property>
-       </widget>
-      </widget>
       <widget class="QWidget" name="tab_data">
        <attribute name="title">
         <string>Data</string>
@@ -1932,7 +1958,270 @@ background-color: blue; border: none;
         <string>Documents</string>
        </attribute>
       </widget>
-      <widget class="QWidget" name="tab_user">
+      <widget class="QWidget" name="tab_feed">
+       <attribute name="title">
+        <string>Feed</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_16">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QRadioButton" name="radioButton_2">
+              <property name="text">
+               <string>Live Data Feed</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_4">
+            <property name="text">
+             <string>Historical Data Feed</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>Historical Data Settings</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_8">
+                 <property name="text">
+                  <string>Time</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTimeEdit" name="timeEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="text">
+                  <string>Date</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dateEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string>Feed Status</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <item>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="text">
+                  <string>Update Feed Setting</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <item>
+                <widget class="QLabel" name="label_11">
+                 <property name="text">
+                  <string>Live Feed</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_10">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+background-color: red; border: none; 
+}
+QPushButton:pressed{ 
+background-color: blue; border: none; 
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Historic Feed</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_11">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{ 
+background-color: red; border: none; 
+}
+QPushButton:pressed{ 
+background-color: blue; border: none; 
+}
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_users">
        <attribute name="title">
         <string>Users</string>
        </attribute>
@@ -1964,11 +2253,29 @@ background-color: blue; border: none;
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionLoad_Config"/>
+    <addaction name="actionSave_Config"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_Logs"/>
+    <addaction name="actionSave_logs"/>
+    <addaction name="separator"/>
+    <addaction name="actionModule_load"/>
+    <addaction name="actionModule_Save"/>
    </widget>
    <widget class="QMenu" name="menuConfiguration">
     <property name="title">
      <string>Configuration</string>
     </property>
+    <addaction name="actionLoad_Config_2"/>
+    <addaction name="actionSafe_Config"/>
+    <addaction name="separator"/>
+    <addaction name="actionUsername_2"/>
+    <addaction name="actionConnect"/>
+    <addaction name="actionDisconnect"/>
+    <addaction name="actionGet_Status"/>
+    <addaction name="separator"/>
+    <addaction name="actionMute"/>
+    <addaction name="actionMute_Out"/>
    </widget>
    <widget class="QMenu" name="menuTabs">
     <property name="contextMenuPolicy">
@@ -1983,6 +2290,8 @@ background-color: blue; border: none;
     <addaction name="actionNet"/>
     <addaction name="actionData"/>
     <addaction name="actionDocuments"/>
+    <addaction name="actionFeed"/>
+    <addaction name="actionUsers"/>
    </widget>
    <addaction name="menuSex"/>
    <addaction name="menuConfiguration"/>
@@ -1996,11 +2305,6 @@ background-color: blue; border: none;
    <property name="checked">
     <bool>false</bool>
    </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/gear-dark.png</normaloff>
-     <normalon>:/Icons/gear-light.png</normalon>:/Icons/gear-dark.png</iconset>
-   </property>
    <property name="text">
     <string>Config</string>
    </property>
@@ -2008,11 +2312,6 @@ background-color: blue; border: none;
   <action name="actionMap">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/map-dark.png</normaloff>
-     <normalon>:/Icons/map-light.png</normalon>:/Icons/map-dark.png</iconset>
    </property>
    <property name="text">
     <string>Map</string>
@@ -2022,12 +2321,6 @@ background-color: blue; border: none;
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/comm-dark.png</normaloff>
-     <normalon>:/Icons/comm-light.png</normalon>
-     <activeon>:/Icons/comm-light.png</activeon>:/Icons/comm-dark.png</iconset>
-   </property>
    <property name="text">
     <string>Comms</string>
    </property>
@@ -2035,11 +2328,6 @@ background-color: blue; border: none;
   <action name="actionNet">
    <property name="checkable">
     <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/net-dark.png</normaloff>
-     <normalon>:/Icons/net-light.png</normalon>:/Icons/net-dark.png</iconset>
    </property>
    <property name="text">
     <string>Net</string>
@@ -2052,11 +2340,6 @@ background-color: blue; border: none;
    <property name="checked">
     <bool>false</bool>
    </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/db-dark.png</normaloff>
-     <normalon>:/Icons/db-light.png</normalon>:/Icons/db-dark.png</iconset>
-   </property>
    <property name="text">
     <string>Data</string>
    </property>
@@ -2068,29 +2351,99 @@ background-color: blue; border: none;
    <property name="checked">
     <bool>false</bool>
    </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/docs-dark.png</normaloff>
-     <normalon>:/Icons/docs-light.png</normalon>:/Icons/docs-dark.png</iconset>
-   </property>
    <property name="text">
     <string>Documents</string>
    </property>
   </action>
-  <action name="actionRadar">
+  <action name="actionFeed">
    <property name="checkable">
     <bool>true</bool>
    </property>
-   <property name="checked">
-    <bool>false</bool>
+   <property name="text">
+    <string>Feed</string>
    </property>
-   <property name="icon">
-    <iconset resource="../icons.qrc">
-     <normaloff>:/Icons/radar-dark.png</normaloff>
-     <normalon>:/Icons/radar-light.png</normalon>:/Icons/radar-dark.png</iconset>
+  </action>
+  <action name="actionUsers">
+   <property name="checkable">
+    <bool>true</bool>
    </property>
    <property name="text">
-    <string>Radar</string>
+    <string>Users</string>
+   </property>
+  </action>
+  <action name="actionLoad_Config">
+   <property name="text">
+    <string>Load Config</string>
+   </property>
+  </action>
+  <action name="actionSave_Config">
+   <property name="text">
+    <string>Save Config</string>
+   </property>
+  </action>
+  <action name="actionUsername">
+   <property name="text">
+    <string>Username</string>
+   </property>
+  </action>
+  <action name="actionLoad_Config_2">
+   <property name="text">
+    <string>Load Config</string>
+   </property>
+  </action>
+  <action name="actionSafe_Config">
+   <property name="text">
+    <string>Safe Config</string>
+   </property>
+  </action>
+  <action name="actionLoad_Logs">
+   <property name="text">
+    <string>Load Logs</string>
+   </property>
+  </action>
+  <action name="actionSave_logs">
+   <property name="text">
+    <string>Save Logs</string>
+   </property>
+  </action>
+  <action name="actionUsername_2">
+   <property name="text">
+    <string>Username</string>
+   </property>
+  </action>
+  <action name="actionModule_load">
+   <property name="text">
+    <string>Module Load</string>
+   </property>
+  </action>
+  <action name="actionModule_Save">
+   <property name="text">
+    <string>Module Save</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionDisconnect">
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+  </action>
+  <action name="actionGet_Status">
+   <property name="text">
+    <string>Get Status</string>
+   </property>
+  </action>
+  <action name="actionMute">
+   <property name="text">
+    <string>Mute In</string>
+   </property>
+  </action>
+  <action name="actionMute_Out">
+   <property name="text">
+    <string>Mute Out</string>
    </property>
   </action>
  </widget>
