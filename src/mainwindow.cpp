@@ -1,10 +1,12 @@
 #include <iostream>
 #include <QScrollBar>
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "socket/socket.h"
 #include <string>
 
+#include "networking/client.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+namespace CommandControl::UI {
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -70,8 +72,9 @@ void MainWindow::on_NetConnectButton_clicked()
     printf("\nConnect\n");
     //Socket sock = Socket(5000,"127.0.0.1");
     //sock.Connect();
-    Socket s;
-    s.doConnect();
+    CommandControl::Networking::Client s_client;
+    s_client.Connect("www.google.com", 80);
 }
 
+}
 

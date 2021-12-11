@@ -3,10 +3,12 @@
 
 #include <QMainWindow>
 #include <QString>
-//#include "src/socket/socket.h"
+
 namespace Ui {
 class MainWindow;
 }
+
+namespace CommandControl::UI {
 
 class MainWindow : public QMainWindow
 {
@@ -36,6 +38,9 @@ private:
     Ui::MainWindow *ui;
 
 };
+
 void hello();
+
+}
 
 #endif // MAINWINDOW_H
