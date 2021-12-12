@@ -7,7 +7,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-namespace CommandControl::UI {
+using namespace CommandControl::UI;
+
+
+
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -226,8 +230,14 @@ void MainWindow::on_NetConnectButton_clicked()
     s_client.Connect("www.google.com", 80);
 }
 
+
+
+
+
+
+
+void MainWindow::on_button_test_window_clicked()
+{
+    QMainWindow allah;
+    allah.show();
 }
-
-
-
-
