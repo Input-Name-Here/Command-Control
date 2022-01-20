@@ -29,10 +29,13 @@ SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
         src/networking/client.cpp
+        src/networking/protocol.cpp
 
 HEADERS += \
         src/mainwindow.h \
         src/networking/client.h
+        src/networking/protocol.h
+        src/networking/colour.h
 
 FORMS += \
         forms/mainwindow.ui

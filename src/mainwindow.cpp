@@ -9,7 +9,7 @@
 
 using namespace CommandControl::UI;
 
-
+CommandControl::Networking::Client s_client;
 
 
 
@@ -226,18 +226,19 @@ void MainWindow::on_NetConnectButton_clicked()
     printf("\nConnect\n");
     //Socket sock = Socket(5000,"127.0.0.1");
     //sock.Connect();
-    CommandControl::Networking::Client s_client;
-    s_client.Connect("www.google.com", 80);
+
+    s_client.Connect("localhost", 5000);
 }
 
 
 
 
 
-
+/*
 
 void MainWindow::on_button_test_window_clicked()
 {
     QMainWindow allah;
     allah.show();
 }
+*/

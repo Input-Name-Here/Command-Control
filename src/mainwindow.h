@@ -46,7 +46,7 @@ private slots:
 
     void on_actionUsers_triggered();
 
-    void on_button_test_window_clicked();
+    //void on_button_test_window_clicked();
 
 private:
     Ui::MainWindow *ui;

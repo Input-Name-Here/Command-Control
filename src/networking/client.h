@@ -15,7 +15,7 @@ namespace CommandControl::Networking {
         explicit Client(QObject *parent = 0);
         ~Client();
 
-        void Connect(QString server_ip, uint8_t port);
+        void Connect(QString server_ip, unsigned int port);
     private:
         static void thread_listen(Client* cl);
     signals:
