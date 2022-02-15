@@ -7,34 +7,30 @@
 int arglen(struct argument);
 
 struct argument{
-	std::string argtype;
-	short int      len;
-	std::string data;
-    argument(){}
-    argument(std::string a, std::string d){
-        this->argtype = a;
-        this->data = d;
-    }
+    std::string type;
+    short int      len;
+    std::string data;
 };
-
-
 
 class message
 {
 public:
-	std::string encode();
-	void decode(std::string etxt);
-    
-    std::string getRequest();
+    std::vector<unsigned char>  encode();
+    void decode(std::vector<unsigned char>  etxt);
     void debug();
-    
-	unsigned char type;
-	short int flags;
 
-	std::vector<struct argument> arguments;
+    short int flags=0x0000;
+
+    std::vector<struct argument> arguments;
+    const unsigned char protocol[4] = {0x43,0x32,0x44,0x00};
+    const unsigned char  version    = 1;
+    unsigned int target = 0x111111; // Reciever / 3 Byte
+    unsigned int origin = 0x222222; // Sender / 3 Byte
+    unsigned int msgID  = 0x33333333; // Message block ID / 4 byte
+
 private:
-	unsigned char protocol[2] = {0x43,0x32}; 
-	unsigned char  version    = 1;
+    unsigned short int startIndex;
+    unsigned short int endIndex;
 
 };
 

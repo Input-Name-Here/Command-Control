@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <iostream>
 #include <string>
 #include <unistd.h>
 #include <thread>
@@ -34,13 +35,21 @@ namespace CommandControl::Networking {
         }
 
         message conmsg;
-        conmsg.arguments = {};
-        conmsg.type = 0x00;
+        struct argument arg;
+        arg.data = "hello";
+        arg.type = "arg";
+        conmsg.arguments = {arg};
         conmsg.flags = 0x0000;
-        std::cout << conmsg.encode() << std::endl;
+        conmsg.debug();
+        std::vector<unsigned char> msgoutput = conmsg.encode();
+        std::string stroutput = std::string(msgoutput.begin(),msgoutput.end());
+        std::cout << stroutput << std::endl;
         qInfo("Sucessfully connected to server.");
         socket_thread = std::thread(thread_listen, this);
-
+        qInfo("Sucessfully connected to server.");
+        //QByteArray bytemsg;
+        QByteArray bytemsg = QByteArray(reinterpret_cast<const char*>(msgoutput.data()), msgoutput.size());
+        socket->write(bytemsg);
 
     }
 
